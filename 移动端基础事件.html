@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no" charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			width: 100px;
+			height: 100px;
+			background:pink;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+
+			var box = document.querySelector("#box");
+			// box.style.background = "blue"; 
+			box.addEventListener( "touchstart", function(){
+				// this.style.background="red";
+				console.log(1);
+			})
+			box.addEventListener( "touchend", function(){
+				// this.style.background="red";
+				console.log(2);
+			})
+			box.addEventListener( "touchmove", function(){
+				// this.style.background="red";
+				console.log(3);
+			})
+			//touch事件,在chrome的模拟器下,部分版本 通过on 的方式来添加事件无效.
+		}
+	</script>
+</head>
+<body>
+	<div id="box">
+		
+	</div>
+</body>
+</html>
