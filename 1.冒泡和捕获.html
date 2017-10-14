@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="viewport" content = "width=device-width,user-scalable=no" charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		#box{
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: relative;
+		}
+		#box2{
+			width: 100px;
+			height: 100px;
+			background: yellow;
+			top:0;
+			left:150px;
+			position:absolute;
+		}
+	</style>
+	<script>
+		window.onload =function(){
+			var box = document.querySelector("#box");
+			var box2 = document.querySelector("#box2");
+
+			box.addEventListener("touchstart",function(ev){
+				console.log(ev);
+			},true)
+
+		}
+	</script>
+</head>
+<body>
+	<div id="box">
+		<div id="box2">
+			
+		</div>
+	</div>
+</body>
+</html>
