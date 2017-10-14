@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no" charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			width: 100px;
+			height: 100px;
+			background:pink;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+
+			var box = document.querySelector("#box");
+			// box.style.background = "blue"; 
+			box.ontouchstart = function(){
+				// this.style.background="red";
+				console.log(1);
+			}
+			box.ontouchend = function(){
+				this.style.background="orange";
+				console.log(2);
+			}
+			box.ontouchmove = function(){
+				this.style.background="black";
+				console.log(3);
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="box">
+		
+	</div>
+</body>
+</html>
